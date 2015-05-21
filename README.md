@@ -1,25 +1,19 @@
-# Ember-push
+# ember-push
 
-This README outlines the details of collaborating on this Ember addon.
+Simple [Pusher](https://pusher.com/) integration for your Ember app.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```bash
+# From within your ember-cli project
+ember install ember-push
+```
 
-## Running
+## Configuration
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+```javascript
+// config/environment.js
+ENV['ember-push'] = {
+  key: 'REQUIRED'
+};
+```
