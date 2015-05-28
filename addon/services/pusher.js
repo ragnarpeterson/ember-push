@@ -54,7 +54,7 @@ export default Ember.Service.extend({
   },
 
   unsubscribe(target, channelName) {
-    const mapping = this._mappingFor(target, channelName);
+    const mapping = this._mappingFor(channelName);
     mapping.removeTarget(target);
     if (!mapping.get('hasTargets')) {
       this._removeChannel(channelName);
