@@ -25,7 +25,7 @@ export default Ember.Service.extend({
     return this._handlers[target.toString()] = function(eventName, data) {
       const actionName = Ember.String.camelize(eventName.replace(':', '-'));
 
-      if (Ember.typeOf(target._actions[actionName]) === 'function') {
+      if (Ember.typeOf(target.actions[actionName]) === 'function') {
         Ember.run(target, target.send, actionName, data);
       }
     }
